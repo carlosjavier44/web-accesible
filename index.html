@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias Accesibles</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: lightblue;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #005bb5;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav ul li a:focus, nav ul li a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        main {
+            flex: 2;
+            margin-right: 100px;
+        }
+        .noticia {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            width: 100%;
+        }
+        aside {
+            flex: 1;
+            background: #e4e4e4;
+            padding: 15px;
+            border-radius: 8px;
+            height: fit-content;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 1rem;
+            margin-top: 20px;
+        }
+        img {
+            width: 75%;
+            height: auto;
+            border-radius: 8px;
+        }
+        a{
+            color: black;
+            text-decoration: none;
+        }
+        #titulo{
+            color: white;
+        }
+
+        video{
+            width: 75%;
+            height: auto;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            aside {
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 tabindex="1"><a href="#main-content" id="titulo">Noticias Accesibles</a></h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" tabindex="2">Inicio</a></li>
+                <li><a href="registro.html" tabindex="3">Registro</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="container" id="main-content">
+        <main>
+            <article class="noticia">
+                <h2 tabindex="4">Deportes: Gran Final</h2>
+                <img src="imagen3.jpg" alt="Equipo celebrando una victoria" tabindex="5">
+                <p tabindex="6">El partido final de la temporada dejó a los aficionados emocionados...</p>
+            </article>
+            <article class="noticia">
+                <h2 tabindex="7">Avance en Tecnología</h2>
+                <img src="imagen1.jpg" alt="Persona usando un dispositivo avanzado" tabindex="8">
+                <p tabindex="9">Un nuevo dispositivo ha revolucionado el mundo de la tecnología...</p>
+            </article>
+            <article class="noticia">
+                <h2 tabindex="10">Trailer - Breaking Bad</h2>
+                <video controls poster="portada.jpg" tabindex="11">
+                    <source src="bb.mp4" type="video/mp4">
+                    <track src="español.srt" kind="subtitles" srclang="es" label="Español" default>
+                    <track src="ingles.srt" kind="subtitles" srclang="en" label="English">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+                <p tabindex="12">Temporada 1</p>
+            </article>
+        </main>
+        
+        <aside>
+            <h2 tabindex="13">Información Adicional</h2>
+            <h3 tabindex="14">Noticiero Nazari</h3>
+            <ul>
+                <li><a tabindex="15" href="https://www.ideal.es/granada/orden-hospitalaria-planta-diputacion-frena-rehabilitacion-hospital-san-juan-dios-20240212.html" target="_blank">La orden hospitalaria frena la rehabilitación del Hospital San Juan de Dios</a></li>
+                <li><a tabindex="16" href="https://www.granadahoy.com/granada/Granada-reformas-trafico-cambios-urbanismo_0_1874813957.html" target="_blank">Cambios en el tráfico y urbanismo de Granada</a></li>
+                <li><a tabindex="17" href="https://www.ideal.es/granada/cultura/semanas-granada-conocera-veredicto-europea-20240210.html" target="_blank">Granada conocerá pronto el veredicto sobre su candidatura europea</a></li>
+            </ul>
+            <h3 tabindex="18">Noticias del Granada FC</h3>
+            <ul>
+                <li><a tabindex="19" href="https://www.granadahoy.com/granadacf/Granada-FC-Stoichkov-Borja-Baston_0_1874813958.html" target="_blank">La nueva sociedad del gol en el Granada: Stoichkov y Borja Bastón</a></li>
+                <li><a tabindex="20" href="https://www.ideal.es/granadacf/granada-fc-proxima-jornada-20240212.html" target="_blank">Próximo partido del Granada FC: rival y alineaciones</a></li>
+                <li><a tabindex="21" href="https://www.marca.com/futbol/granada.html" target="_blank">Últimas noticias del Granada FC en Marca</a></li>
+            </ul>
+        </aside>
+        
+    </div>
+    
+    <footer>
+        <p tabindex="22">&copy; 2025 Noticias Accesibles - Carlos Javier Gutiérrez Gutiérrez</p>
+    </footer>
+</body>
+</html>
