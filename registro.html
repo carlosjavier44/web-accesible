@@ -10,13 +10,13 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: lightblue;
             color: #333;
             line-height: 1.6;
         }
 
         header {
-            background: #005bb5;
+            background-color: #005bb5;
             color: white;
             padding: 15px 20px;
             text-align: center;
@@ -25,6 +25,7 @@
         nav ul {
             list-style: none;
             padding: 0;
+            text-align: center;
         }
 
         nav ul li {
@@ -43,53 +44,49 @@
             text-decoration: underline;
         }
 
-        main {
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-        }
-
-        form {
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
             background: white;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            max-width: 400px;
-            width: 100%;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
         }
 
         label {
-            font-weight: bold;
-            display: block;
             margin-top: 10px;
+            font-weight: bold;
         }
 
-        input,
-        button {
-            width: 100%;
+        input {
             padding: 10px;
-            margin-top: 5px;
             border: 1px solid #ccc;
             border-radius: 5px;
-            font-size: 1rem;
+            width: 80%;
         }
 
         button {
-            background: #005bb5;
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #005bb5;
             color: white;
             border: none;
             cursor: pointer;
-            margin-top: 15px;
+            border-radius: 5px;
         }
 
-        button:hover,
-        button:focus {
-            background: #004494;
-        }
-
-        a {
-            color: black;
+        footer a {
+            color: white;
             text-decoration: none;
+        }
+
+        button:hover {
+            background-color: #003f7f;
         }
 
         footer {
@@ -100,39 +97,45 @@
             font-size: 1rem;
             margin-top: 20px;
         }
+
+        #titulo {
+            color: white;
+            text-decoration: none;
+        }
     </style>
 </head>
 
 <body>
     <header>
-        <a href="#formulario" tabindex="1">
-            <h1 tabindex="0">Registro</h1>
-        </a>
+        <h1><a href="index.html" id="titulo">Noticias Accesibles</a></h1>
         <nav>
             <ul>
-                <li><a href="index.html" tabindex="2">Inicio</a></li>
-                <li><a href="registro.html" tabindex="3">Registro</a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="registro.html">Registro</a></li>
+                <li><a href="ayuda.html">Ayuda</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <form action="#" method="POST" id="formulario">
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" name="nombre" required tabindex="4">
+    <div class="container">
+        <h2>Registro</h2>
+        <form action="procesar_registro.php" method="POST">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
 
-            <label for="email">Correo Electrónico</label>
-            <input type="email" id="email" name="email" required tabindex="5">
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
 
-            <label for="password">Contraseña</label>
-            <input type="password" id="password" name="password" required tabindex="6">
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required>
 
-            <button type="submit" tabindex="7">Registrarse</button>
+            <button type="submit">Registrarse</button>
         </form>
-    </main>
+    </div>
 
     <footer>
-        <p>&copy; 2025 Noticias Accesibles - Todos los derechos reservados</p>
+        <p>&copy; 2025 Noticias Accesibles</p>
+        <a href="contacto.html">Contacto</a>
     </footer>
 </body>
 
